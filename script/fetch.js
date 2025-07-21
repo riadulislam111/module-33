@@ -75,20 +75,20 @@
 
 
 
-const handlerLoadTodo = () => {
-  fetch("https://jsonplaceholder.typicode.com/todos/1")
-  .then(res => res.json())
-  .then(data => {
-    const container = document.getElementById("todo-data");
-   container.innerHTML = `
-   <h3> TODO Details</h3>
-   <p><strong>ID:</strong> ${data.id}</p>
-   <p><strong>Title:</strong> ${data.title}</p>
-   <p><strong>Completed:</strong> ${data.Completed ? "Yes" : "No"}</p>
+// const handlerLoadTodo = () => {
+//   fetch("https://jsonplaceholder.typicode.com/todos/1")
+//   .then(res => res.json())
+//   .then(data => {
+//     const container = document.getElementById("todo-data");
+//    container.innerHTML = `
+//    <h3> TODO Details</h3>
+//    <p><strong>ID:</strong> ${data.id}</p>
+//    <p><strong>Title:</strong> ${data.title}</p>
+//    <p><strong>Completed:</strong> ${data.Completed ? "Yes" : "No"}</p>
    
    
-   `
+//    `
   
   
-  })
-}
+//   })
+// }
