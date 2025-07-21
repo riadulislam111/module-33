@@ -265,14 +265,14 @@
 // });
 
 
-const apiKey = "your_api_key";
-const city = "Dhaka";
+// const apiKey = "your_api_key";
+// const city = "Dhaka";
 
-fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`)
-.then(res => res.json())
-.then(data => {
-    console.log("Weather Data:", data);
-})
-.catch(error => {
-    console.log("Error fetching weather data:", error);
-});
+// fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`)
+// .then(res => res.json())
+// .then(data => {
+//     console.log("Weather Data:", data);
+// })
+// .catch(error => {
+//     console.log("Error fetching weather data:", error);
+// });
