@@ -75,12 +75,6 @@
 
 
 
-/*************  ✨ Windsurf Command ⭐  *************/
-/**
- * Fetches todo data from the given URL and populates the
- * #todo-data container with the todo details.
- */
-/*******  512f08db-41ee-41ee-bf7f-cab674a4a216  *******/
 const handlerLoadTodo = () => {
   fetch("https://jsonplaceholder.typicode.com/todos/1")
   .then(res => res.json())
