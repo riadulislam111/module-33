@@ -3,9 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>All Data Post</title>
 
-    <style>
+<style>
+    .card{
+        border: 2px solid gray;
+        margin: 5px;
+        padding: 10px;
+        text-align: center;
+        background-color: aqua;
+    }
+    button {
+        background-color: 007bff;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+    <!-- <style>
         .card{
             border: 2px solid gray;
             margin: 4px;
@@ -14,17 +43,28 @@
             background-color: yellowgreen;
         }
        
-    </style>
+    </style> -->
 </head>
 <body>
-    
+
+
+<h1>Load All Post</h1>
+<div id="postContainer" class="post-container">
+
+</div>
+
+<button onclick="handlePost()">Load Post</button>
+
+
+
+<!--     
 <h1>Load All Post</h1>
 
 <button onclick="handlsePost()">Load Post</button>
 
 <div id="postContainer" class="post-container">
 
-</div>
+</div> -->
 
     <script src="./post.js"></script>
 </body>
