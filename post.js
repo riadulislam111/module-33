@@ -276,3 +276,6 @@
 // .catch(error => {
 //     console.log("Error fetching weather data:", error);
 // });
+
+
+ 
