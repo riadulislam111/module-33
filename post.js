@@ -21,7 +21,7 @@ const displayPost = (posts) => {
     }
 }
 
-// handlsePost()
+
 
 
 const handleUpdate= () => {
