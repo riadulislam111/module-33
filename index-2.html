@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD Product Manager</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    input, button { margin: 5px; padding: 6px; }
+    table { border-collapse: collapse; margin-top: 20px; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+    .btn { cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h2>🛒 Product Manager (CRUD App)</h2>
+
+  <input type="text" id="name" placeholder="Product Name" />
+  <input type="number" id="price" placeholder="Price" />
+  <input type="text" id="color" placeholder="Color" />
+  <button onclick="addProduct()">Add Product</button>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th><th>Price</th><th>Color</th><th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="productTable"></tbody>
+  </table>
+
+  <script>
+    const API = 'http://localhost:3000/products';
+
+    // 📌 Load All Products (GET)
+    function loadProducts() {
+      fetch(API)
+        .then(res => res.json())
+        .then(data => {
+          const table = document.getElementById('productTable');
+          table.innerHTML = '';
+          data.forEach(product => {
+            table.innerHTML += `
+              <tr>
+                <td>${product.name}</td>
+                <td>${product.price}</td>
+                <td>${product.color}</td>
+                <td>
+                  <button class="btn" onclick="deleteProduct(${product.id})">🗑 Delete</button>
+                  <button class="btn" onclick="editProduct(${product.id}, '${product.name}', ${product.price}, '${product.color}')">✏️ Edit</button>
+                </td>
+              </tr>
+            `;
+          });
+        });
+    }
+
+    // ✅ Add Product (POST)
+    function addProduct() {
+      const name = document.getElementById('name').value;
+      const price = +document.getElementById('price').value;
+      const color = document.getElementById('color').value;
+
+      if (!name || !price || !color) return alert("Fill all fields!");
+
+      fetch(API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, price, color })
+      })
+      .then(() => {
+        clearForm();
+        loadProducts();
+      });
+    }
+
+    // ❌ Delete Product (DELETE)
+    function deleteProduct(id) {
+      fetch(`${API}/${id}`, { method: 'DELETE' })
+        .then(() => loadProducts());
+    }
+
+    // ✏️ Edit Product (fill form)
+    function editProduct(id, name, price, color) {
+      document.getElementById('name').value = name;
+      document.getElementById('price').value = price;
+      document.getElementById('color').value = color;
+
+      const updateBtn = document.createElement('button');
+      updateBtn.textContent = "Update Product";
+      updateBtn.onclick = function () {
+        const newName = document.getElementById('name').value;
+        const newPrice = +document.getElementById('price').value;
+        const newColor = document.getElementById('color').value;
+
+        fetch(`${API}/${id}`, {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name: newName, price: newPrice, color: newColor })
+        })
+        .then(() => {
+          clearForm();
+          updateBtn.remove();
+          loadProducts();
+        });
+      };
+
+      document.body.appendChild(updateBtn);
+    }
+
+    function clearForm() {
+      document.getElementById('name').value = '';
+      document.getElementById('price').value = '';
+      document.getElementById('color').value = '';
+    }
+
+    loadProducts(); // Load on page load
+  </script>
+</body>
+</html>

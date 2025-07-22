@@ -1,27 +1,61 @@
-// const handlsePost = () => {
-//     fetch("https://jsonplaceholder.typicode.com/posts").then(res => res.json()).then(data => {
-//         displayPost(data)
-//     })
-// }
+const handlePost = () => {
+    fetch("https://jsonplaceholder.typicode.com/posts").then(res => res.json()).then(data => {
+        displayPost(data)
+    })
+}
 
-// const displayPost = (posts) => {
+const displayPost = (posts) => {
 
-//     const postContainer = document.getElementById('postContainer');
+    const postContainer = document.getElementById('postContainer');
     
-//     for(const post of posts){
-//        console.log(post)
-//     const div = document.createElement("div");
-//     div.classList.add("card")
-//     div.innerHTML = `
-//     <h1>${post.title}</h1>
-//     <p>${post.body}</p>
-//     <button>Dtaisl</button>
-//     `;
-//     postContainer.appendChild(div)
-//     }
-// }
+    for(const post of posts){
+       console.log(post)
+    const div = document.createElement("div");
+    div.classList.add("card")
+    div.innerHTML = `
+    <h1>${post.title}</h1>
+    <p>${post.body}</p>
+    <button>Dtaisl</button>
+    `;
+    postContainer.appendChild(div)
+    }
+}
 
-// // handlsePost()
+// handlsePost()
+
+
+const handleUpdate= () => {
+    fetch('https://jsonplaceholder.typicode.com/posts/1', {
+  method: 'PUT',
+  body: JSON.stringify({
+    id: 1,
+    title: 'foo',
+    body: 'bar',
+    userId: 1,
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+}
+
+const handleCreate = () => {
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'POST',
+  body: JSON.stringify({
+    title: 'foo',
+    body: 'bar',
+    userId: 1,
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+}
 
 
 //////////
