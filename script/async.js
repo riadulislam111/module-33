@@ -192,3 +192,133 @@
 
 // console.log("synchronous task");
 
+
+
+///////
+
+
+// async function amrData() {
+//     return "data chole aise";
+// }
+// amrData().then(console.log);
+
+
+// async function dataAno() {
+//     const response = await fetch("https://jsonplaceholder.typicode.com/users/1")
+//     const user = await response.json();
+//     console.log(user);
+
+// }
+
+
+
+
+// async function userDekhao() {
+//     try {
+//         const response = await fetch("https://jsonplaceholder.typicode.com/users/1")
+//         const data = await response.json();
+//         console.log("User:", data);
+//     }catch (error) {
+//         console.log("Problem hoyeche:", error);
+//     }
+// }
+// userDekhao();
+
+
+
+// const handleUser = async () => {
+//     try {
+//         const response = await fetch("https://jsonplaceholder.typicode.com/users");
+
+//         const data = await response.json();
+//         console.log(data)
+//     } catch{
+//         console.log("Hello Error!!");
+//     }
+// }
+
+// handleUser();
+
+
+// const handleUser = async () => {
+//     try {
+//         const response = await fetch("https://jsonplaceholder.typicode.com/users");
+
+//         const data = await response.json();
+//         console.log(data)
+//     } catch {
+//         console.log("Hello Error!");
+//     }
+// }
+
+// handleUser();
+
+
+
+// const getPosts = async () => {
+//     try {
+//         const res = await fetch("https://jsonplaceholder.typicode.com/users");
+//         const posts = await res.json();
+//         console.log(posts);
+//     }catch {
+//       console.log("Post anar somoy hoyeche ")        
+//     }
+// }
+// getPosts();
+
+
+// const getSingleUser = async () => {
+//     try {
+//         const res = await fetch("https://jsonplaceholder.typicode.com/users");
+//         const user = await res.json();
+//         console.log(user);
+//     }catch {
+//         console.log("problem");
+//     }
+// }
+// getSingleUser();
+
+
+// const getTodos = async () => {
+//     try {
+//        const res = await fetch("https://jsonplaceholder.typicode.com/todos");
+//        const todos = await res.json();
+//        todos.forEach(todos => {
+//         console.log(`${todos.title}`);
+//        });
+//     }catch {
+//         console.log("problem")
+//     }
+// }
+// getTodos();
+
+
+// const getUserNames = async () => {
+//     try {
+//         const res = await fetch("https://jsonplaceholder.typicode.com/todos");
+//         const users = await res.json();
+//         users.forEach(user => {
+//             console.log(`${user.title}`);
+//         });
+//     }catch {
+//         console.log("problem")
+//     }
+// }
+// getUserNames();
+
+
+// const getPostTitle = async () => {
+//     try {
+//         const res = await fetch("https://jsonplaceholder.typicode.com/todos");
+//         const posts = await res.json();
+//         posts.slice(0, 10).forEach(post => {
+//             console.log(`${post.title}`);
+//         });
+//     }catch {
+//         console.log("problem")
+//     }
+// }
+// getPostTitle();
+
+
+
