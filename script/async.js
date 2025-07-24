@@ -424,3 +424,95 @@
 
 
 
+// const jsonString = '{"name": "Riadul", "age": 25, "isStudent": false}';
+
+// const user = JSON.parse(jsonString);
+
+// console.log(user.name);
+// console.log(user.age);
+// console.log(user.isStudent);
+
+
+
+// const settings = {
+//     theme: "dark",
+//     fontSize: "16px"
+// };
+
+// localStorage.setItem("userSettings", JSON.stringify(settings));
+
+// const storedSettings =  JSON.parse(localStorage.getItem("userSettings"));
+
+// console.log(storedSettings.theme);
+// console.log(storedSettings.fontSize);
+
+
+// const jsonString = '{"name": "John", "age": 30, "city": "New York"}';
+
+// const obj = JSON.parse(jsonString);
+
+// console.log(obj.name);
+// console.log(obj.age);
+
+
+
+// const invalidJson = '{name: "John"}';
+
+// try {
+//     const obj = JSON.parse(invalidJson);
+//     console.log(obj);
+// } catch (error) {
+//     console.log("Failed to parse JSON:", error.message);
+// }
+
+
+
+
+// fetch("https://jsonplaceholder.typicode.com/posts")
+// .then(res => res.json())
+// .then(data => {
+//     console.log(data);
+// })
+// .catch(error => {
+//     console.log("Error:", error);
+// });
+
+
+// const jsonStr = '{"name": "John", "birthDate": "1999-01-01"}';
+
+// const obj = JSON.parse(jsonStr, (key, value) => {
+//     if (key === "birthDate") {
+//         return new Date(value);
+//     }
+//     return value;
+// });
+
+// console.log(obj.birthDate.getFullYear());
+
+
+// const jsonArray = '[{"id": 1, "name": "Alice"}, {"id": 2 "name": "Bob"}]';
+
+// const users = JSON.parse(jsonArray);
+
+// users.forEach(user => {
+//     console.log(user.name);
+// });
+
+
+// fetch("")
+// .then(res => res.json()
+// .then(data => console.log(data)));
+
+
+// fetch("", {
+//     method: "POST",
+//     headers: {
+//         "Content-Type": "application/json"
+//     },
+//     body: JSON.stringify({
+//         name: "John",
+//         email: "john@gmail.com"         
+//     })
+// })
+// .then(res => res.json())
+// .then(data => console.log(data));
