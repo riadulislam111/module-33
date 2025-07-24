@@ -322,3 +322,105 @@
 
 
 
+// // JSON
+// {
+//     "name: "Riadul",
+//     "age": 25,
+//     "isStudent": false,
+//     "hobbies": ["study", "code write", "song"]
+// }
+
+
+
+
+
+// {
+//     "name": "Alice",
+//     "age": 34,
+//     "is)_student": false,
+//     "courses": ["HTML", "CSS", "JS"],
+//     "address": {
+//         "city": "Boston",
+//         "zip": null
+//     },
+//     "gpa": 3.8
+// }
+
+
+// const user = {
+//     name: "Riadul",
+//     age: 25,
+//     isStudent: false,
+
+// };
+
+// const jsonString = JSON.stringify(user);
+// console.log(jsonString);
+
+
+
+// const obj = {
+//     name: "Riadul",
+//     greet: function() {
+//         return "Hi"};
+//     age :undefined
+// };
+
+// console.log(JSON.stringify(obj));
+
+
+
+// const obj = {
+//   name: "Riadul",
+//   greet: function() { return "Hi"; },
+//   age: undefined
+// };
+
+// console.log(JSON.stringify(obj));
+
+
+
+// const obj  = {
+//     name: "Riadul",
+//     greet: function() {return "Hi";},
+//     age: undefined
+// };
+
+// console.log(JSON.stringify(obj));
+
+
+
+
+// const user = {
+//     name: "Rahul",
+//     age: 25,
+//     isAdmin: false,
+//     courses: ["JS", "HTML", "CSS"],
+//     address: { city: "Kolkata"}
+// };
+
+// const jsonString = JSON.stringify(user);
+// console.log(jsonString);
+
+
+// fetch("https://jsonplaceholder.typicode.com/users", {
+//     method: "POST",
+//     body: JSON.stringify(userData)
+// });
+
+
+// localStorage.setItem("userPrefs", JSON.stringify(performance));
+
+// const data = JSON.parse(localStorage.getItem("userPrefs"));
+// console.log(data.theme); // Output: "dark"
+
+
+
+
+// console.log(JSON.stringify(complexObject, null, 2));
+
+
+// const originalObj = JSON.parse(jsonstring);
+
+
+
